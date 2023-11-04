@@ -135,4 +135,4 @@ Solution :
    step-5 : End
 
    FlowChart
-   <img src="sum.png"/>
+   <img src="https://github.com/otz-training/mern-b3/blob/main/sum.png" alt=""/>
