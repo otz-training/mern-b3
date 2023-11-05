@@ -135,4 +135,43 @@ Solution :
    step-5 : End
 
    FlowChart
-   <img src="https://github.com/otz-training/mern-b3/blob/main/sum.png" alt=""/>
+
+## SESSION - 02 : Logic Building
+
+While designing algorith and flowchart for designing soluition of any problem we may have
+following statements
+
+a. Sequencial statement
+b. Branching Statement
+c. loop statements /Repition
+
+Exercises :
+
+1. convert temperature from Celsius to Fahrenheit
+
+   Step-1 Start
+   Step-2 Input temperature in Celsius say C
+   Step-3 F = (9.0/5.0 x C) + 32
+   Step-4 Display Temperature in Fahrenheit F
+   Step-5 Stop
+
+2. convert temperature from Fahrenheit to Celsius
+
+   Step-1 Start
+   Step-2 Input temperature in Fahrenheit say F
+   Step-3 C = 5.0/9.0 (F - 32 )
+   Step-4 Display Temperature in Celsius C
+   Step-5 Stop
+
+3. find Area and Perimeter of Square
+
+   area = a \* a
+
+   perimeter = 4 \* a
+
+   Step-1 Start
+   Step-2 Input Side Length of Square say L
+   Step-3 Area = L x L
+   Step-4 PERIMETER = 4 x L
+   Step-5 Display AREA, PERIMETER
+   Step-6 Stop

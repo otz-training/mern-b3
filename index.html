@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th colspan="2">
+                    Celsius to Fahrenheit Converter
+                </th>
+            </tr>
+            <tr>
+                <td>Enter Temperature in Celsius :</td>
+                <td><input type="number" id="tc" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onclick="findTemp()">Find</button><button onclick="clear1()">Clear</button></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                     <span id="tf"></span>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <script src ="temperature-converter-cf.js"></script>
+    <script>
+        //   let n = parseFloat(prompt("Enter Temperature in celcius :"));
+        //   let temp = CFConverter(n);
+        //   console.log(temp);
+        function findTemp()
+        {
+            let ot = parseFloat(document.getElementById("tc").value);
+            let temp = CFConverter(ot);
+            document.getElementById("tf").innerHTML = ot+"<sup>&deg;</sup> C  is "+ Math.floor(temp) +"<sup>&deg;</sup>  F";
+        }
+
+        function clear1(){
+            document.getElementById("tc").value="";
+            document.getElementById("tc").focus();
+        }
+    </script>
+</body>
+</html>
