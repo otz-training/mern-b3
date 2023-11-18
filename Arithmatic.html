@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Enter Num1 :</td>
+            <td>
+                <input type="text" id="num1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Enter Num2 :</td>
+            <td>
+                <input type="text" id="num2"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+               <button onclick="find()">Click</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="res">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function find(){
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let str="";
+            str+=`${num1} + ${num2}  = ${num1 + num2}`+"<br>";
+            str+=`${num1} - ${num2}  = ${num1 - num2}`+"<br>";
+            str+=`${num1} * ${num2}  = ${num1 * num2}`+"<br>";
+            str+=`${num1} / ${num2}  = ${num1 / num2}`+"<br>";
+            str+=`${num1} % ${num2}  = ${num1 % num2}`+"<br>";
+            console.log(str);
+            document.getElementById("res").innerHTML = str;
+        }
+    </script>
+</body>
+</html>

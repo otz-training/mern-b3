@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button onclick="changeRed()">Red-<span id="rc"></span></button>
+        <button onclick="changeGreen()">Green-<span id="gc"></span></button>
+        <button onclick="changeBC()">Blue-<span id="bc"></span></button>
+        
+        <script>
+            let rc=0 ,gc=0,bc=0;
+            let GC=0;
+            const PI=90;
+         
+            document.getElementById("rc").innerHTML = rc;
+            document.getElementById("gc").innerHTML = gc;
+            document.getElementById("bc").innerHTML = bc;
+            function changeRed(){
+                
+                 rc++;
+                 document.getElementById("rc").innerHTML = rc;
+            }
+            function changeGreen(){
+                gc ++;
+                 document.getElementById("gc").innerHTML = gc;
+            }
+            function changeBC(){
+                    bc ++;
+                 document.getElementById("bc").innerHTML = bc;
+            }
+        </script>
+    </body>
+</html>
