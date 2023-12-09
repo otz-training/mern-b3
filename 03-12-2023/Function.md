@@ -216,56 +216,207 @@ https://contactmentor.com/js-function-exercises-solution/
 
 ## Predefined Functions :
 
-1. Mathematical Functions :
+# 1. Mathematical Functions :
 
-   - These functions are responsible for mathematical operations.
+- These functions are responsible for mathematical operations.
 
-   - These functions are present under an Object known as Math Object.
+- These functions are present under an Object known as Math Object.
 
-   - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
-   - Math object having Properties and Methods
+- Math object having Properties and Methods
 
-     Properties :
+  Properties :
 
-     ***
+  ***
 
-     Math.E
-     Euler's number and the base of natural logarithms; approximately 2.718.
+  Math.E
+  Euler's number and the base of natural logarithms; approximately 2.718.
 
-   Math.LN10
-   Natural logarithm of 10; approximately 2.303.
+Math.LN10
+Natural logarithm of 10; approximately 2.303.
 
-   Math.LN2
-   Natural logarithm of 2; approximately 0.693.
+Math.LN2
+Natural logarithm of 2; approximately 0.693.
 
-   Math.LOG10E
-   Base-10 logarithm of E; approximately 0.434.
+Math.LOG10E
+Base-10 logarithm of E; approximately 0.434.
 
-   Math.LOG2E
-   Base-2 logarithm of E; approximately 1.443.
+Math.LOG2E
+Base-2 logarithm of E; approximately 1.443.
 
-   Math.PI
-   Ratio of a circle's circumference to its diameter; approximately 3.14159.
+Math.PI
+Ratio of a circle's circumference to its diameter; approximately 3.14159.
 
-   Math.SQRT1_2
-   Square root of ½; approximately 0.707.
+Math.SQRT1_2
+Square root of ½; approximately 0.707.
 
-   Math.SQRT2
-   Square root of 2; approximately 1.414.
+Math.SQRT2
+Square root of 2; approximately 1.414.
 
-   Methods :
+Methods :
 
-   ***
+---
 
-   1. Math.abs()
-   2. Math.floor()
-   3. Math.max()
-   4. Math.min()
-   5. Math.pow()
-   6. Math.random()
-   7. Math.round()
-   8. Math.sign()
-   9. Math.sqrt()
-   10. Math.trunc()
-   11. Math.ceil()
+1.  Math.abs()
+2.  Math.floor()
+3.  Math.max()
+4.  Math.min()
+5.  Math.pow()
+6.  Math.random()
+7.  Math.round()
+8.  Math.sign()
+9.  Math.sqrt()
+10. Math.trunc()
+11. Math.ceil()
+
+# 2. String Handling Functions :
+
+## String In Javascript :
+
+let name = "Alok Kumar"
+
+console.log(typeof name);
+
+### String Function Lists :
+
+---
+
+| SLNO | FUNCTION NAME | PURPOSE |
+
+---
+
+                   anchor()
+
+                   at()
+
+                   big()
+
+                   blink()
+
+                   bold()
+
+                   charAt()
+
+                   charCodeAt()
+
+                   codePointAt()
+
+                   concat()
+
+                   String()
+
+
+                   endsWith()
+
+                   fixed()
+
+                   fontcolor()
+
+                   fontsize()
+
+                   includes()
+
+                   indexOf()
+
+                   isWellFormed()
+
+                   italics()
+
+                   lastIndexOf()
+
+                   link()
+
+
+                   localeCompare()
+
+match
+:
+ƒ match()
+matchAll
+:
+ƒ matchAll()
+normalize
+:
+ƒ normalize()
+padEnd
+:
+ƒ padEnd()
+padStart
+:
+ƒ padStart()
+repeat
+:
+ƒ repeat()
+replace
+:
+ƒ replace()
+replaceAll
+:
+ƒ replaceAll()
+search
+:
+ƒ search()
+slice
+:
+ƒ slice()
+small
+:
+ƒ small()
+split
+:
+ƒ split()
+startsWith
+:
+ƒ startsWith()
+strike
+:
+ƒ strike()
+sub
+:
+ƒ sub()
+substr
+:
+ƒ substr()
+substring
+:
+ƒ substring()
+sup
+:
+ƒ sup()
+toLocaleLowerCase
+:
+ƒ toLocaleLowerCase()
+toLocaleUpperCase
+:
+ƒ toLocaleUpperCase()
+toLowerCase
+:
+ƒ toLowerCase()
+toString
+:
+ƒ toString()
+toUpperCase
+:
+ƒ toUpperCase()
+toWellFormed
+:
+ƒ toWellFormed()
+trim
+:
+ƒ trim()
+trimEnd
+:
+ƒ trimEnd()
+trimLeft
+:
+ƒ trimStart()
+trimRight
+:
+ƒ trimEnd()
+trimStart
+:
+ƒ trimStart()
+valueOf
+:
+ƒ valueOf()
