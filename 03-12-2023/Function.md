@@ -286,137 +286,180 @@ console.log(typeof name);
 
 ---
 
-                   anchor()
+1.  anchor() :(Deprecated) Adds an anchor tag to the specified string
 
-                   at()
+    Example :
+    let str = "Welcome to Javascript string handling function tutorial";
+    let a = str.anchor();
+    console.log(a);
 
-                   big()
+    output :
+    <a name="undefined">Welcome to Javascript string handling function tutorial</a>
 
-                   blink()
+2.  at() : It accepts the index of string and returns the charcater present at that index.
 
-                   bold()
+        Example :
+        let str = "Welcome to Javascript string handling function tutorial";
+        let item = str.at(0);
+        console.log(item); //W
 
-                   charAt()
+        let item = str.at(55);
+        console.log(item);// undefined
 
-                   charCodeAt()
+        let item = str.at(-1);
+        console.log(item);//l
 
-                   codePointAt()
+        let item = str.at(54);
+        console.log(item);//l
 
-                   concat()
+        let item = str.at(-55);
+        console.log(item);//W
 
-                   String()
+        Example-2 : Count Number of r's in the string
 
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+        if (str.at(i) == "r" || str.at(i) == "R") {
+        count++;
+        }
+        // console.log(str.at(i));
+        }
+        console.log("Total Number of r's :" + count);
 
-                   endsWith()
+        Example-3 : Print Words in the string line by line using at() method
 
-                   fixed()
+        let str = "Welcome to Javascript string handling function tutorial";
+        let word = "";
+        let arr = [];
+        for (let i = 0; i < str.length; i++) {
+        if (str.at(i) == " ") {
+        console.log(word);
+        arr.push(word);
+        word = "";
+        continue;
+        }
+        word = word + str.at(i);
+        }
 
-                   fontcolor()
+        console.log(arr);
+        console.log(arr[0]);
 
-                   fontsize()
+        Example-4 : Count the frequency of a word in a string
 
-                   includes()
+        console.log(
 
-                   indexOf()
+          findWordFrequesncy("this is a ball , this is a flower, this is a dog", "this")
+          );
+          function findWordFrequesncy(str, word) {
+          //logic
+          let w = "";
+          let arr = [];
+          for (let i = 0; i < str.length; i++) {
+          if (str.at(i) == " ") {
+          arr.push(w);
+          w = "";
+          continue;
+          }
+          w = w + str.at(i);
+          }
+          console.log(arr);
+          let count = 0;
+          for (let i = 0; i < arr.length; i++) {
+          if (word === arr[i]) {
+          count++;
+          }
+          }
+          return count;
+          }
 
-                   isWellFormed()
+3.  big() :(deprecated) add the <big></big> tag to the string
+     <script>
+        let str = "Welcome to Javascript string handling function tutorial";
+        let b = str.big();
+        document.write(str);
+        document.write(b);
+        let a = str.anchor();
+        document.write(a);
+    </script>
 
-                   italics()
+4.  blink()
 
-                   lastIndexOf()
+5.  bold()
 
-                   link()
+6.  charAt() : same as at()
 
+    let str = "Welcome to Javascript string handling function tutorial";
+    let b = str.charAt(0);
+    console.log(b);
 
-                   localeCompare()
+7.  charCodeAt()
+    character ASCII Code
+    ***
+        A-Z        65 - 90
+        a-z        97 - 122
+        0-9        48 - 57
+8.  codePointAt()
 
-match
-:
-ƒ match()
-matchAll
-:
-ƒ matchAll()
-normalize
-:
-ƒ normalize()
-padEnd
-:
-ƒ padEnd()
-padStart
-:
-ƒ padStart()
-repeat
-:
-ƒ repeat()
-replace
-:
-ƒ replace()
-replaceAll
-:
-ƒ replaceAll()
-search
-:
-ƒ search()
-slice
-:
-ƒ slice()
-small
-:
-ƒ small()
-split
-:
-ƒ split()
-startsWith
-:
-ƒ startsWith()
-strike
-:
-ƒ strike()
-sub
-:
-ƒ sub()
-substr
-:
-ƒ substr()
-substring
-:
-ƒ substring()
-sup
-:
-ƒ sup()
-toLocaleLowerCase
-:
-ƒ toLocaleLowerCase()
-toLocaleUpperCase
-:
-ƒ toLocaleUpperCase()
-toLowerCase
-:
-ƒ toLowerCase()
-toString
-:
-ƒ toString()
-toUpperCase
-:
-ƒ toUpperCase()
-toWellFormed
-:
-ƒ toWellFormed()
-trim
-:
-ƒ trim()
-trimEnd
-:
-ƒ trimEnd()
-trimLeft
-:
-ƒ trimStart()
-trimRight
-:
-ƒ trimEnd()
-trimStart
-:
-ƒ trimStart()
-valueOf
-:
-ƒ valueOf()
+9.  concat()
+
+10. String()
+
+11. endsWith()
+
+12. fixed()
+
+13. fontcolor()
+
+14. fontsize()
+
+15. includes()
+
+16. indexOf()
+
+17. isWellFormed()
+
+18. italics()
+
+19. lastIndexOf()
+
+20. link()
+
+21. localeCompare()
+
+22. match()
+23. matchAll()
+24. normalize()
+25. padEnd()
+26. padStart()
+27. repeat()
+28. replace()
+29. replaceAll()
+30. search()
+31. slice()
+32. small()
+33. split()
+34. startsWith()
+35. strike()
+36. sub()
+37. substr()
+38. substring()
+39. sup()
+40. toLocaleLowerCase()
+41. toLocaleUpperCase()
+42. toLowerCase
+43. toLowerCase()
+44. toString()
+45. toUpperCase()
+46. toWellFormed()
+47. trim()
+48. trimEnd()
+49. trimStart()
+50. trimRight()
+51. trimEnd()
+52. trimStart
+53. trimStart()
+54. valueOf()
+
+Exercises :
+
+https://www.w3resource.com/javascript-exercises/javascript-string-exercises.php
