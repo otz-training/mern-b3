@@ -394,17 +394,88 @@ console.log(typeof name);
 
 7.  charCodeAt()
     character ASCII Code
+
     ***
+
         A-Z        65 - 90
         a-z        97 - 122
         0-9        48 - 57
+
+        let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        for (let i = 0; i < str.length; i++) {
+          console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
+        }
+
+        str = str.toLowerCase();
+        for (let i = 0; i < str.length; i++) {
+          console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
+        }
+
+        str = "0123456789";
+        for (let i = 0; i < str.length; i++) {
+          console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
+        }
+
+        //1. Count number of vowel and consonant in a string
+
+        //2. Create a  function which will return true if the string contains only alphabets not digits or any symbols
+
+        function IsAlphabets(str) {
+          for (let i = 0; i < str.length; i++) {
+            // A-Z : 65-90
+            //a-z :97-122
+            if (
+              str.charCodeAt(i) < 65 ||
+              (str.charCodeAt(i) > 90 && str.charCodeAt(i) < 97) ||
+              str.charCodeAt(i) > 122
+            ) {
+              return false;
+            }
+          }
+          return true;
+        }
+
+        console.log(IsAlphabets("Abcd1"));
+
 8.  codePointAt()
+
+    SAME as charCodeAt()
 
 9.  concat()
 
-10. String()
+    let str1 = "Hello ";
+    let str2 = "World ";
+    let str3 = str1 + str2;
+    let str4 = str1.concat(str2);
+    console.log(str1);
+    console.log(str2);
+    console.log(str3);
+    console.log(str4);
+
+10. String() : Constructor Function ,using it you can create string object
+
+        let str = new String();
+        console.log(str);
+
+        let str1 = new String("Welcome");
+        console.log(str1);
+
+        console.log(String.prototype);
 
 11. endsWith()
+
+    let str = "Welcome";
+    let names = ["Rahul", "Rakul", "Pikul", "Ravi", "Rajesh", "Milu"];
+    console.log(str.endsWith("e"));
+
+    //Find out the names who is end with l.
+
+    for (let i = 0; i < names.length; i++) {
+    if (names[i].endsWith("l")) {
+    console.log(names[i]);
+    }
+    }
 
 12. fixed()
 
@@ -412,7 +483,19 @@ console.log(typeof name);
 
 14. fontsize()
 
-15. includes()
+        console.log(str.fontsize("80px").fontcolor("green"));
+
+        document.write(str1.fixed());
+        document.write('<br>');
+        document.write("Font Color is "+str1.fontcolor("red"));
+        document.write('<br>');
+        document.write("Font Size is "+str1.fontsize("80px").fontcolor("green"));
+        document.write('<br>');
+
+15. includes() : Returns true /false based on searching
+
+        str2 = "Rahul,Rakul,Pikul,Ravi,Rajesh,Milu";
+        console.log(str2.includes("Ravindra"));
 
 16. indexOf()
 
@@ -444,21 +527,33 @@ console.log(typeof name);
 37. substr()
 38. substring()
 39. sup()
-40. toLocaleLowerCase()
-41. toLocaleUpperCase()
-42. toLowerCase
-43. toLowerCase()
-44. toString()
-45. toUpperCase()
-46. toWellFormed()
-47. trim()
-48. trimEnd()
-49. trimStart()
-50. trimRight()
-51. trimEnd()
-52. trimStart
-53. trimStart()
-54. valueOf()
+40. toLocaleUpperCase()
+41. toLowerCase()
+42. toString()
+43. toUpperCase()
+44. toWellFormed()
+45. trim()
+46. trimEnd()
+47. trimStart()
+48. trimRight()
+49. trimEnd()
+50. trimStart()
+
+    let str = " Welcome ";
+
+    console.log(str);
+    console.log(str.length);
+
+    let str2 = str.trim(); //removes leading space and trailing space
+    console.log(str2.length);
+
+    let str3 = str.trimEnd();
+    console.log(str3.length);
+
+    let str4 = str.trimStart();
+    console.log(str4.length);
+
+51. valueOf()
 
 Exercises :
 

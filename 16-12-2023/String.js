@@ -1,19 +1,16 @@
-let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let str = "    Welcome    ";
 
-for (let i = 0; i < str.length; i++) {
-  console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
-}
+console.log(str);
+console.log(str.length);
 
-str = str.toLowerCase();
-for (let i = 0; i < str.length; i++) {
-  console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
-}
+let str2 = str.trim(); //removes leading space and trailing space
+console.log(str2.length);
 
-str = "0123456789";
-for (let i = 0; i < str.length; i++) {
-  console.log(str.charAt(i) + "----->" + str.charCodeAt(i));
-}
+let str3 = str.trimEnd();
+console.log(str3.length);
 
-//1. Count number of vowel and consonant in a string
+let str4 = str.trimStart();
+console.log(str4.length);
 
-//2. Create a  function which will return true if the does contain only alphabets not digits or any symbols
+str2 = "Rahul,Rakul,Pikul,Ravi,Rajesh,Milu";
+console.log(str2.includes("Ravindra"));

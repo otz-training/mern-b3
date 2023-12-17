@@ -7,20 +7,33 @@
 </head>
 <body>
     <script>
-        let str = "Welcome to Javascript string handling function tutorial";
-        let b = str.big();
-        document.writeln(str);
+        // let str = "Welcome to Javascript string handling function tutorial";
+        // let b = str.big();
+        // document.writeln(str);
+        // document.write('<br>');
+        // document.writeln(b);
+        // document.write('<br>');
+        // let a = str.anchor();
+        // document.writeln(a);
+        // document.write('<br>');
+        // let blink = str.blink();
+        // document.writeln(blink);
+        // document.write('<br>');
+        // let bold = str.bold();
+        // document.writeln(bold);
+        let str = new String();
+        console.log(str);
+
+        let str1 = new String("Welcome");
+        console.log(str1);
+
+        console.log(String.prototype);
+        document.write(str1.fixed());
         document.write('<br>');
-        document.writeln(b);
+        document.write("Font Color is "+str1.fontcolor("red"));
         document.write('<br>');
-        let a = str.anchor();
-        document.writeln(a);
+        document.write("Font Size is "+str1.fontsize("80px").fontcolor("green"));
         document.write('<br>');
-        let blink = str.blink();
-        document.writeln(blink);
-        document.write('<br>');
-        let bold = str.bold();
-        document.writeln(bold);
     </script>
 </body>
 </html>
