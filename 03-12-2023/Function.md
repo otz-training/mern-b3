@@ -558,3 +558,70 @@ console.log(typeof name);
 Exercises :
 
 https://www.w3resource.com/javascript-exercises/javascript-string-exercises.php
+
+## 30-12-2023 :SATURDAY
+
+# Date Functions :
+
+1.constructor Date()
+2.getDate()
+3.getDay()
+4.getFullYear()
+5.getHours()
+6.getMilliseconds()
+7.getMinutes()
+8.getMonth()
+9.getSeconds()
+10.getTime()
+11.getTimezoneOffset()
+12.getUTCDate()
+13.getUTCDay()
+14.getUTCFullYear()
+15.getUTCHours()
+16.getUTCMilliseconds
+17.getUTCMilliseconds()
+18.getUTCMinutes()
+19.getUTCMonth()
+20.getUTCSeconds()
+21.getYear()
+22.setDate()
+23.setFullYear()
+24.setHours()
+25.setMilliseconds()
+26.setMinutes()
+27.setMonth()
+28.setSeconds()
+29.setTime()
+30.setUTCDate()
+31.setUTCFullYear()
+32.setUTCHours()
+33.setUTCMilliseconds()
+34.setUTCMinutes()
+35.setUTCMonth()
+36.setUTCSeconds()
+37.setYear()
+38.toDateString()
+39.toUTCString()
+40.toISOString()
+41.toJSON()
+42.toLocaleDateString()
+43.toLocaleString()
+44.toLocaleTimeString()
+45.toString()
+46.toTimeString()
+47.toUTCString()
+https://www.w3resource.com/javascript-exercises/javascript-date-exercises.php
+
+## Array :
+
+1. What is array
+2. Why array
+3. How to implement array in js
+4. Types of array
+5. Manipulation of array using different loop
+6. Array Methods
+7. Operations on Array
+
+   -> Traversal
+   -> Sorting
+   -> Searching

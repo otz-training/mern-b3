@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dt = new Date();
+        console.log(dt);
+        console.log(Date.prototype);
+        console.log(dt.getDay());
+        console.log(dt.getMonth());
+        console.log(dt.getFullYear());
+        console.log(dt.getDate());
+        console.log(dt.getTime());
+        console.log(dt.getHours());
+        console.log(dt.getMinutes());
+        console.log(dt.getSeconds());
+        console.log(dt.getMilliseconds());
+        console.log(dt.toJSON());
+        console.log(dt.toDateString());
+        console.log(dt.toString());
+        console.log(dt.toISOString());
+        console.log(dt.toLocaleDateString());
+        getDayName(dt);
+        function getDayName(dt){
+            switch(dt.getDay()){
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednessday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            case 7:
+                console.log("Sunday");
+                break;
+        }
+
+        }
+        let myDate = new Date("2015-09-23");
+        console.log(myDate);
+        console.log(myDate.toLocaleDateString());
+        console.log(myDate.toLocaleString());
+        let dt1 = myDate.toLocaleDateString();
+        let s = dt1.split("/");
+        let mydate1 = s[1]+"-"+s[0]+"-"+s[2];
+        console.log(mydate1);
+    </script>
+</body>
+</html>
