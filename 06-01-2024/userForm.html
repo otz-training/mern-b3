@@ -67,37 +67,57 @@
 
     </div>
     <script>
-        const users=[];
+       
         function addUser(){
+             // Step-1 : Collect form Data
              let name = document.getElementById("txtName").value;
              let email = document.getElementById("txtEmail").value;
              let phone = document.getElementById("txtPhone").value;
              let address = document.getElementById("txtAdress").value;
              let dob = document.getElementById("txtDOB").value;
              let age = document.getElementById("txtAge").value;
-             //Create  an user object
 
-             const user1 = {
-                Name : name,
-                Email :email,
-                Phone : phone,
-                Addrress:address,
-                DOB :dob,
-                Age : age
-             };
-             console.log(user1);
-             console.log(user1.Name);
-             users.push(user1);
+             if(name !="" && email!="" && phone!="" && address!="" && dob !="" && age!="")
+             {
+                    //Step-2 : Create  an user object
+                    const user1 = {
+                                    Name : name,
+                                    Email :email,
+                                    Phone : phone,
+                                    Addrress:address,
+                                    DOB :dob,
+                                    Age : age
+                                };
+
+                    //step-3 : Get data from localStorage if null then assign blank array to users variable
+                    let users = JSON.parse(localStorage.getItem("users"))??[];
+                    console.log(users);
+                    users.push(user1);
+                    localStorage.setItem("users",JSON.stringify(users));
+                    bindData();
+             }else{
+                alert("Please enter all data");
+             }
+             
+        }
+
+        function bindData(){
              let element = document.getElementById("userRecords");
-             let data ="<tr>";
-                data = data +"<td>"+1+"</td>";
-                data = data + "<td>"+user1.Name+"</td>";
-                data = data + "<td>"+user1.Email+"</td>";
-                data = data + "<td>"+user1.Phone+"</td>";
-                data = data + "<td>"+user1.Addrress+"</td>";
-                data = data + "<td>"+user1.DOB+"</td>";
-                data = data + "<td>"+user1.Age+"</td>";
+             let users = JSON.parse(localStorage.getItem("users"))??[];
+             
+             let data='';
+             for(let i=0;i<users.length;i++){
+                data = data+"<tr>";
+                data = data +"<td>"+(i+1)+"</td>";
+                data = data + "<td>"+users[i].Name+"</td>";
+                data = data + "<td>"+users[i].Email+"</td>";
+                data = data + "<td>"+users[i].Phone+"</td>";
+                data = data + "<td>"+users[i].Addrress+"</td>";
+                data = data + "<td>"+users[i].DOB+"</td>";
+                data = data + "<td>"+users[i].Age+"</td>";
                 data = data + "</tr>";
+             }
+             
             console.log(data);
             element.innerHTML = data;
         }
