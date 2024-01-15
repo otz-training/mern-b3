@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="bindData()">
     <div class="container">
         <div class="row">
              <div class="col-8">
@@ -36,9 +36,17 @@
                 <div class="mb-3">
                     <label for="txtAge" class="form-label">AGE</label>
                     <input type="number" class="form-control" id="txtAge" placeholder="User Age">
+                    
+                    <input type="hidden" id="txtIndex" />
                 </div>
-                <div class="mb-3">
-                    <button class="btn btn-success form-control" onclick="addUser()">Add</button>
+                <div class="mb-3 row">
+                    <div class="col-md-6">
+                        <button id="btnSave" class="btn btn-success w-100 " onclick="addUser()">Add</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button  class="btn btn-warning w-100 " onclick="cancel()">Cancel</button>
+                    </div>
+                   
                 </div>
              </div>
         </div>
@@ -55,6 +63,7 @@
                                 <th>ADDRESS</th>
                                 <th>DOB</th>
                                 <th>AGE</th>
+                                <th colspan="2">ACTION</th>
                             </tr>
                         </thead>
                         <tbody id="userRecords">
@@ -67,7 +76,17 @@
 
     </div>
     <script>
-       
+       function cancel(){
+            document.getElementById("txtName").value="";
+            document.getElementById("txtEmail").value="";
+            document.getElementById("txtPhone").value="";
+            document.getElementById("txtAdress").value="";
+            document.getElementById("txtDOB").value="";
+            document.getElementById("txtAge").value="";
+            document.getElementById("txtIndex").value=0;
+            
+            document.getElementById("btnSave").innerText="ADD";
+       }
         function addUser(){
              // Step-1 : Collect form Data
              let name = document.getElementById("txtName").value;
@@ -76,7 +95,7 @@
              let address = document.getElementById("txtAdress").value;
              let dob = document.getElementById("txtDOB").value;
              let age = document.getElementById("txtAge").value;
-
+             let btnText = document.getElementById("btnSave").innerText;
              if(name !="" && email!="" && phone!="" && address!="" && dob !="" && age!="")
              {
                     //Step-2 : Create  an user object
@@ -91,10 +110,18 @@
 
                     //step-3 : Get data from localStorage if null then assign blank array to users variable
                     let users = JSON.parse(localStorage.getItem("users"))??[];
-                    console.log(users);
-                    users.push(user1);
+                    if(btnText.toLowerCase()=='add'){
+                       users.push(user1);
+                       alert("Record Inserted Successfully !!");
+                    }else if(btnText.toLowerCase()=='update'){
+                       let id = document.getElementById("txtIndex").value;
+                       users[id] = user1;
+                       alert("Record updated successfully!!");
+                    }
                     localStorage.setItem("users",JSON.stringify(users));
+
                     bindData();
+                    cancel();
              }else{
                 alert("Please enter all data");
              }
@@ -115,11 +142,46 @@
                 data = data + "<td>"+users[i].Addrress+"</td>";
                 data = data + "<td>"+users[i].DOB+"</td>";
                 data = data + "<td>"+users[i].Age+"</td>";
+                data = data + "<td><button onclick='editRecord("+i+")' class='btn btn-sm btn-info'>Edit</button></td>";
+                data = data + "<td><button onclick='deleteRecord("+i+")' class='btn btn-sm btn-danger'>Delete</button></td>";
                 data = data + "</tr>";
              }
              
             console.log(data);
             element.innerHTML = data;
+        }
+
+        function editRecord(id){
+            //alert(id);
+            let users = JSON.parse(localStorage.getItem("users"));
+            console.log(users[id]);
+            let user = users[id];
+            document.getElementById("txtName").value=user.Name;
+            document.getElementById("txtEmail").value=user.Email;
+            document.getElementById("txtPhone").value=user.Phone;
+            document.getElementById("txtAdress").value=user.Addrress;
+            document.getElementById("txtDOB").value=user.DOB;
+            document.getElementById("txtAge").value=user.Age;
+            document.getElementById("txtIndex").value=id;
+            
+            document.getElementById("btnSave").innerText="UPDATE";
+        }
+
+        function deleteRecord(id){
+                //alert(id);
+                let c = confirm("Are you sure you want to delete this record");
+                //alert(c);
+                if(c){
+                    //Get all records from local Storage
+                    let users = JSON.parse(localStorage.getItem("users"));
+                    //Delete record from given index
+                    users.splice(id,1); //1 means number of item delete
+                    //store dat into local storage
+                    localStorage.setItem("users",JSON.stringify(users));
+                    alert("Record Deleted Successfully!!");
+                    bindData();
+                }
+               
         }
     </script>
 </body>
