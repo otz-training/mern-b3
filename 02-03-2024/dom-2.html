@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c1{
+            border: solid 1px red;
+            width: 500px;
+            height: 400px;
+            background-color: yellow;
+            color: blue;
+            font-size: 1.5rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script>
+        function ShowDivs(){
+        //1. create a div node and add it under body
+        let div1 = document.createElement('div');
+        let p1 = document.createElement('p');
+        p1.innerHTML = '<b>This is Paragraph-1</b>';
+        p1.className="c1";
+        p1.addEventListener('click',(event) => {
+              alert('Mouse Clicked');
+        });
+        let p2 = document.createElement('p');
+        p2.innerHTML = '<b>This is Paragraph-2</b>';
+        p2.style ="color:blue";
+        let p3 = document.createElement('p');
+        p3.innerHTML = '<b>This is Paragraph-3</b>';
+        p3.style ="color:green";
+        //div1.innerText ="This is DIV-1";
+        div1.appendChild(p1);
+        div1.appendChild(p2);
+        div1.appendChild(p3);
+        let div2 = document.createElement('div');
+        div2.innerText ="This is DIV-2";
+        let div3 = document.createElement('div');
+        div3.innerText ="This is DIV-3";
+        let div4 = document.createElement('div');
+        div4.innerText ="This is DIV-4";
+        let div5 = document.createElement('div');
+        div5.innerText ="This is DIV-5";
+        document.body.appendChild(div1);
+        document.body.appendChild(div2);
+        document.body.appendChild(div3);
+        document.body.appendChild(div4);
+        document.body.appendChild(div5);
+        }
+     
+    </script>
+</head>
+<body>
+
+    <button onclick="ShowDivs()">Add Divs</button>
+</body>
+</html>

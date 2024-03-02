@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        sample Text
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+        <p>paragraph3</p>
+        <p>paragraph4</p>
+        <a>a1</a>
+        <a>a2</a>
+        <span></span>
+    </div>
+    <p id="p1">paragraph</p>
+    <script>
+        //  var node = document.getElementById("p1");
+        //  var child = node.firstChild;
+        //  console.log(child);
+        //  console.log(child.nodeType);
+        //  console.log(node.nodeType);
+        //  if(node.nodeType == Node.ELEMENT_NODE){
+        //     console.log("Element node");
+        //     console.log("Node name is "+node.nodeName);
+        //  }
+
+         var node1 = document.getElementById("d1");
+         var childrens = node1.childNodes;
+        
+         
+
+         var onlyParagraphs = [];
+         childrens.forEach(node => {
+           if(node.nodeName == "P")
+           {
+             onlyParagraphs.push(node)
+           }
+        });
+
+         console.log("Childrens under d1 :");
+         console.log(childrens);
+         console.log("Total Nodes under d1 : "+childrens.length);
+         console.log("Paragraph Nodes Under d1 :");
+         console.log(onlyParagraphs);
+         console.log("Total number of Paragraphs under d1 : "+onlyParagraphs.length);
+
+         //Change Inner Text of the First Paragraph
+         node1.children[0].innerText ="abc";
+
+    </script>
+</body>
+</html>
